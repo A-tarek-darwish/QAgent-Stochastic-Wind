@@ -1,1 +1,1 @@
-# QAgent-Stochastic-Wind
+This file contains a Python code for a Q Agent that navigates a maze that contains immobile obstacles and stochastic wind. It is initially set to run for a maximum of 500 episodes. It also contains a GUI to show the optimal policy developed by the agent and a graph showing the training performance across episodes. 
