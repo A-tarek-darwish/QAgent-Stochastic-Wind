@@ -214,7 +214,7 @@ def my_argmax(arr):
     all_idx = np.argwhere(np.ndarray.flatten(arr) == np.amax(arr))
     return np.random.choice(np.ndarray.flatten(all_idx))
     
-class Q_Agent():
+class SARSA_Agent():
     
     # Initialize environment, gamma, alpha, epsilon, max episodes and reward
     def __init__(self, environment, epsilon,gamma, alpha, max_episodes):
