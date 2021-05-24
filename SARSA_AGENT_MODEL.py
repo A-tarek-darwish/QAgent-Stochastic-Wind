@@ -1,5 +1,4 @@
 # Creator: Abdelrahman Darwish 
-# GUC ID: 40-4072
 # Date : 30/4/2021
 
 import numpy as np
@@ -216,7 +215,7 @@ def my_argmax(arr):
     
 class SARSA_Agent():
     
-    # Initialize environment, gamma, alpha, epsilon, max episodes and reward
+    # Initialize environment, gamma, alpha, epsilon and max episodes
     def __init__(self, environment, epsilon,gamma, alpha, max_episodes):
         self.env = environment
         self.discount = gamma  
@@ -268,7 +267,7 @@ if __name__ == "__main__":
                        treasure_pos=(5, 5),  wind_pos=[(2, 1), (3, 1), (1, 1), (1, 2), (1, 3)], 
                        obstacles_pos =[(1,2),(1,3),(1,4),(4,2),(4,3),(4,4)],
                        delta_t=0.1)
-    agent = Q_Agent(environment=wgw, epsilon=0.05, gamma=0.999, alpha=0.1, max_episodes=500)
+    agent = SARSA_Agent(environment=wgw, epsilon=0.05, gamma=0.999, alpha=0.1, max_episodes=500)
     returns = np.zeros(shape=(agent.max_episodes,))
     for e in range(agent.max_episodes):
         wgw.wgw_window.title("Windy Grid World - Episode #"+str(e+1))
